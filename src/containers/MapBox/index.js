@@ -2,6 +2,11 @@ import Map, { Popup } from "react-map-gl";
 
 import { Flex, Image, Text } from "@chakra-ui/react";
 
+import mapboxgl from "mapbox-gl";
+// @ts-ignore
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 import "./Mapbox.css";
 import { PinMarker } from "./PinMarker";
 import { KecamatanLayer } from "./KecamatanLayer";

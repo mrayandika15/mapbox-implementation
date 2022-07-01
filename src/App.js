@@ -8,6 +8,9 @@ import {
 
 import { getBridge } from "./services";
 
+/* eslint-disable import/no-webpack-loader-syntax */
+import mapboxgl from "mapbox-gl";
+
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import React from "react";
@@ -15,6 +18,10 @@ import { ViewController } from "./components";
 
 function App() {
   const [BridgeResource, setBridgeResource] = useState([]);
+
+  // @ts-ignore
+  mapboxgl.workerClass =
+    require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
   const [defaultViewPort, setViewPort] = useState({
     longitude: 107.71960000000007,

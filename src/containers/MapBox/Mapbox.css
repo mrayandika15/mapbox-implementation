@@ -1,0 +1,11 @@
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapbox-logo {
+  display: none !important;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib.mapboxgl-compact {
+  display: none !important ;
+}
